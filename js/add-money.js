@@ -1,4 +1,5 @@
 const pin = 2025;
+const transactionData = [];
 
 //  add money
 document.getElementById("add-money-btn").addEventListener("click", function (event) {
@@ -19,10 +20,26 @@ document.getElementById("add-money-btn").addEventListener("click", function (eve
         alert("Invalid Account Number");
         return;
     }
+    if (addMoney <= 0) {
+        alert("Invalid Amount");
+        return;
+    }
 
 
     const newBalance = balance + addMoney;
     document.getElementById("balance").innerText = newBalance;
+
+
+
+    // store transaction history data to array
+
+    const data = {
+        name: "Add Money",
+        date: new Date().toLocaleTimeString()
+    }
+
+    transactionData.push(data);
+    console.log(transactionData);
 
 
 })

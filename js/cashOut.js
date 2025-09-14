@@ -16,7 +16,7 @@ document.getElementById("withdraw-btn").addEventListener("click", function (even
         alert("Invalid Agent Number");
         return;
     }
-    if (balance < cashOut) {
+    if (balance < cashOut || cashOut <= 0) {
         alert("Not Enough Balance");
         return;
     }
@@ -24,6 +24,20 @@ document.getElementById("withdraw-btn").addEventListener("click", function (even
 
     const newBalance = balance - cashOut;
     document.getElementById("balance").innerText = newBalance;
+
+
+
+
+
+    // store transaction history data to array
+
+    const data = {
+        name: "Cash Out",
+        date: new Date().toLocaleTimeString()
+    }
+
+    transactionData.push(data);
+    console.log(transactionData);
 
 
 })

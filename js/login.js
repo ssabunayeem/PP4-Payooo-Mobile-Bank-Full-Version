@@ -13,6 +13,4 @@ document.getElementById("btn-login").addEventListener("click", function (event) 
     else {
         alert("Wrong Number or PIN");
     }
-
-
 }) 
