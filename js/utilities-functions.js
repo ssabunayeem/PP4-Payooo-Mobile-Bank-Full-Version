@@ -49,5 +49,5 @@ function btnHover(id) {
 // log out
 
 document.getElementById("log-out").addEventListener("click", function () {
-    window.location.href = "./index.html"
+    window.location.href = "../index.html"
 })
